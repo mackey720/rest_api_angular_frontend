@@ -1,0 +1,20 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div><a href="" class="navbar-brand">Mackey Local</a></div>
+
+        <ul class="navbar-nav">
+            <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/welcome/mackeylocal" class="nav-link">Home</a></li>
+            <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/todos" class="nav-link">Todos</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+            <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+        </form>
+        
+        <ul class="navbar-nav navbar-collapse justify-content-end">
+            <li><a *ngIf="!hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a></li>
+            <li><a *ngIf="hardcodedAuthenticationService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+        </ul>
+    </nav>
+
+</header>
