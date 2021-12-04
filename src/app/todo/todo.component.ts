@@ -22,19 +22,19 @@ export class TodoComponent implements OnInit {
 
   ngOnInit() {
     if(this.id != -1) {
-      this.todoService.getTodo(this.id, 'mackeylocal').subscribe(
+      this.todoService.getTodo(this.id, 'mackey720').subscribe(
         data => this.todo = data
       )
     }
   }
 
   saveTodo(){
-    if(this.id === -1) {
-      this.todoService.createTodo('mackeylocal', this.todo).subscribe(
+    if(this.id == -1) { //=== used when comparing objects. == when omparing primitive
+      this.todoService.createTodo('mackey720', this.todo).subscribe(
         data => this.router.navigate(['todos'])
       )
     } else {
-      this.todoService.updateTodo(this.id, 'mackeylocal', this.todo).subscribe(
+      this.todoService.updateTodo(this.id, 'mackey720', this.todo).subscribe(
         data => {
           this.router.navigate(['todos'])
         }

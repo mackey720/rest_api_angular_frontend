@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CruiseComponent, CruiseShip } from './cruise/cruise.component';
 import { ErrorComponent } from './error/error.component';
 import { ListtodosComponent } from './listtodos/listtodos.component';
 import { LoginComponent } from './login/login.component';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'welcome/:name', component: WelcomeComponent, canActivate: [RouteGuardService]},
   {path: 'todos', component:ListtodosComponent, canActivate: [RouteGuardService]},
+  {path: 'cruises', component: CruiseComponent, canActivate: [RouteGuardService]},
   {path: 'logout', component: LogoutComponent, canActivate: [RouteGuardService]},
   {path: 'todos/:id', component: TodoComponent, canActivate: [RouteGuardService]},
   {path: '**', component: ErrorComponent}

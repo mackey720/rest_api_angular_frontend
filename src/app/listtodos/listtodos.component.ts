@@ -30,15 +30,16 @@ export class ListtodosComponent implements OnInit {
 
   refreshTodos() {
     
-    this.todoService.retrieveAllTodos('mackeylocal').subscribe(
+    this.todoService.retrieveAllTodos('mackey720').subscribe(
       response => {
+        console.log(response)
         this.todos = response
       }
     )
   }
 
   deleteTodo(id : number) {
-    this.todoService.deleteTodo(id, 'mackeylocal').subscribe(
+    this.todoService.deleteTodo(id, 'mackey720').subscribe(
 
       response => {
         this.successMessage = `Delete of Todo ${id} Successful!`
