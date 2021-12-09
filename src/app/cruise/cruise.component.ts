@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CruiseDataService } from '../service/data/cruise-data.service';
 
-export class CruiseShip {
+export class CruiseShips {
   constructor (
     public id : number,
     public cruiseLine : string,
@@ -21,7 +21,7 @@ export class CruiseShip {
 })
 export class CruiseComponent implements OnInit {
 
-  cruiseShip : CruiseShip[] = []
+  cruiseShips : CruiseShips[] = []
 
   constructor(private cruiseShipSerice : CruiseDataService) { }
 
@@ -30,7 +30,7 @@ export class CruiseComponent implements OnInit {
   refreshCruise() {
     this.cruiseShipSerice.retrieveAllCruises().subscribe(
       response => {
-        this.cruiseShip = response
+        this.cruiseShips = response
       }
     )
   }

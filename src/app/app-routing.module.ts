@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CruiseComponent, CruiseShip } from './cruise/cruise.component';
+import { CruiseComponent, CruiseShips } from './cruise/cruise.component';
 import { ErrorComponent } from './error/error.component';
 import { ListtodosComponent } from './listtodos/listtodos.component';
 import { LoginComponent } from './login/login.component';
